@@ -40,7 +40,7 @@ public class XMLOutputProcItemWrapper implements
 
 	@Override
 	public void mouseDoubleClicked(MouseEvent e) {
-		paletteItem.openDialog(logic);
+		paletteItem.openDialog((XMLOutputProcLogic) getProcessorLogic());
 	}
 
 	@Override
@@ -48,6 +48,7 @@ public class XMLOutputProcItemWrapper implements
 		return new XMLOutputProcItemWrapper();
 	}
 
+	@Override
 	@Inject
 	public void setContext(IEclipseContext ctx) {
 		Activator.setEclipseContext(ctx);
